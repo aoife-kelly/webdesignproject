@@ -56,10 +56,16 @@ nav ul li a {
 h1 {
     font-family: 'MoonwalkMiss';
     text-align: center;
+    margin-bottom: 10px; 
+    padding: 5px 10px; 
+    border: 4px solid black; 
+    border-radius: 10px; 
+    display: inline-block; 
 }
 
 h2 {
     text-align: center;
+    font-family: 'MoonwalkMiss';
 }
 
 nav ul li {
@@ -78,10 +84,49 @@ nav ul li {
     background-position: fixed;
     font-family: 'Azonix';
     text-align: center;
+    padding-bottom: 50px;
 }
 
-.text {
-    margin:0px 35px; /*  left right, top bottom */
+.teamBody {
+    background-image: url(../images/bannerNoTxTcolour.png);
+    background-position: fixed;
+    font-family: 'Azonix';
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.col_design {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* laign items to the top */
+    gap: 50px; /* space between team members */
+    padding: 20px;
+    padding-top: 0; 
+}
+
+.team_member {
+    width: 45%;
+    text-align: center;
+}
+/* Add the vertical line between team members */
+.team_member:first-child {
+    border-right: 5px solid black;
+    padding-right: 30px; 
+}
+
+.team_member:last-child {
+    padding-left: 30px; 
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.endrewImg, .joeImg {
+    width: 100%; /* Makes images responsive */
+    max-width: 350px;
+    border: 5px solid black;
 }
 
 .bodyImages {
@@ -91,22 +136,24 @@ nav ul li {
     border:2px solid purple;
     margin:0%;
     padding: 0%;
+    margin-top: 5px;
 }
 
-.bodyImagesv2{
+.bodyImagesv2 {
     display:inline;
     width: 18%;
     height:300px;
     border:2px solid purple;
+    margin-top: 5px;
     margin:0%;
     padding: 0%;
 }
 
 footer {
     background-image: url(../images/bannerNoTxTblank.png);
-    padding:10px;
     text-align: center;
+    left:0;
     position:fixed;
-    bottom:0px;
+    bottom:0;
     width:100%;
 }
