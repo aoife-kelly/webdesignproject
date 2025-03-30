@@ -130,6 +130,29 @@ figure {
     padding: 0%;
 }
 
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-content {
+    width: 50%; 
+    text-align: center;
+}
+
+.video-aside {
+    width: 50%; 
+    display: flex;
+    justify-content: center;
+}
+
+.video-aside iframe {
+    max-width: 100%;
+    border-radius: 10px; 
+}
+
 .team_member p {
     column-count: 2; 
     column-rule: 2px solid purple;
