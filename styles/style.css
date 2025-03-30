@@ -2,7 +2,6 @@ header {
     background-image: url(../images/bannerNoTxT.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: fixed;
     border: 2px solid purple;
     height:150px;
     text-align: center;
@@ -36,7 +35,6 @@ nav {
     background-image: url(../images/bannerNoTxTblank.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: fixed;
     padding: 10px;
     border:2px solid purple;
 }
@@ -51,7 +49,7 @@ nav ul li a {
 }
 
 #active {
-    color: orange;
+    border:2px solid yellow;
 }
 
 h1 {
@@ -67,6 +65,17 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'MoonwalkMiss';
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0); /* used in CSS to visually hide an element while keeping it accessible to screen readers */
+    overflow: hidden;
 }
 
 nav ul li {
@@ -88,29 +97,6 @@ body {
     font-family: 'Azonix';
     text-align: center;
     padding-bottom: 50px;
-}
-
-.col_design {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* laign items to the top */
-    gap: 50px; /* space between team members */
-    padding: 20px;
-    padding-top: 0; 
-}
-
-.team_member {
-    width: 45%;
-    text-align: center;
-}
-/* Add the vertical line between team members */
-.team_member:first-child {
-    border-right: 5px solid black;
-    padding-right: 30px; 
-}
-
-.team_member:last-child {
-    padding-left: 30px; 
 }
 
 figure {
@@ -142,6 +128,12 @@ figure {
     margin-top: 5px;
     margin:0%;
     padding: 0%;
+}
+
+.team_member p {
+    column-count: 2; 
+    column-rule: 2px solid purple;
+    column-gap: 20px; /* Space between columns */
 }
 
 .eventsMain {
@@ -183,33 +175,38 @@ figure {
     margin-bottom: 10px;
 }
 
-/* Button */
 .buyTicket {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-.buyTicket a {
-    text-decoration: none; 
-    color: white; 
-    display: block; /* makes the link fill the button */
+    font-family: 'MoonwalkMiss';
+    display: inline-block;
     width: 100%; 
-    height: 100%;
+    padding: 10px 20px;
+    background-color: purple; 
+    color: white;
     text-align: center;
-    line-height: 40px; /* adjusts vertical alignment */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* include padding and border in width */
 }
-
 
 .buyTicket:hover {
-    background-color: darkpurple;
+    background-color: blueviolet; /* Darker shade on hover */
+}
+.eventsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.eventsTable th, .eventsTable td {
+    border: 2px solid purple;
+    padding: 8px;
+    text-align: left;
+}
+
+.eventsTable th {
+    background-color: purple;
+    color: white;
 }
 
 footer {
